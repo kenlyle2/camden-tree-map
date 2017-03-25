@@ -1,0 +1,758 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-edit" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN editheader}
+	<h2 {$editheader_hiddenattr} data-pageid="{$pageid}" data-brick="editheader" >{$pagetitlelabel app_tree edit}</h2>
+
+{END editheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>Back to list</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>View</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>Edit</button>
+{END edit_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$editfields_hiddenattr} data-pageid="{$pageid}" data-brick="editfields" class="form-horizontal" role="form">
+
+
+
+			{BEGIN id_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_id}" data-fieldname="id" data-signal-error-for="id{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_id}">
+		{BEGIN id_label}{$label app_tree id}{END id_label}
+	</label>
+	<div class="col-md-6" >
+		{$id_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="id">
+		<div class="text-muted" >
+		{$tooltip app_tree id}
+		</div>
+	</div>
+</div>
+</div>
+{END id_fieldblock}
+
+			{BEGIN gpslocation_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_gpslocation}" data-fieldname="gpslocation" data-signal-error-for="gpslocation{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_gpslocation}">
+		{BEGIN gpslocation_label}{$label app_tree gpslocation}{END gpslocation_label}
+	</label>
+	<div class="col-md-6" >
+		{$gpslocation_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="gpslocation">
+		<div class="text-muted" >
+		{$tooltip app_tree gpslocation}
+		</div>
+	</div>
+</div>
+</div>
+{END gpslocation_fieldblock}
+
+			{BEGIN cityproperty_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_cityproperty}" data-fieldname="cityproperty" data-signal-error-for="cityproperty{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_cityproperty}">
+		{BEGIN cityproperty_label}{$label app_tree cityproperty}{END cityproperty_label}
+	</label>
+	<div class="col-md-6" >
+		{$cityproperty_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="cityproperty">
+		<div class="text-muted" >
+		{$tooltip app_tree cityproperty}
+		</div>
+	</div>
+</div>
+</div>
+{END cityproperty_fieldblock}
+
+			{BEGIN datelastupdated_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_datelastupdated}" data-fieldname="datelastupdated" data-signal-error-for="datelastupdated{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_datelastupdated}">
+		{BEGIN datelastupdated_label}{$label app_tree datelastupdated}{END datelastupdated_label}
+	</label>
+	<div class="col-md-6" >
+		{$datelastupdated_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="datelastupdated">
+		<div class="text-muted" >
+		{$tooltip app_tree datelastupdated}
+		</div>
+	</div>
+</div>
+</div>
+{END datelastupdated_fieldblock}
+
+			{BEGIN dateofinitialcreationofentry_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_dateofinitialcreationofentry}" data-fieldname="dateofinitialcreationofentry" data-signal-error-for="dateofinitialcreationofentry{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_dateofinitialcreationofentry}">
+		{BEGIN dateofinitialcreationofentry_label}{$label app_tree dateofinitialcreationofentry}{END dateofinitialcreationofentry_label}
+	</label>
+	<div class="col-md-6" >
+		{$dateofinitialcreationofentry_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="dateofinitialcreationofentry">
+		<div class="text-muted" >
+		{$tooltip app_tree dateofinitialcreationofentry}
+		</div>
+	</div>
+</div>
+</div>
+{END dateofinitialcreationofentry_fieldblock}
+
+			{BEGIN diameterofthetree_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_diameterofthetree}" data-fieldname="diameterofthetree" data-signal-error-for="diameterofthetree{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_diameterofthetree}">
+		{BEGIN diameterofthetree_label}{$label app_tree diameterofthetree}{END diameterofthetree_label}
+	</label>
+	<div class="col-md-6" >
+		{$diameterofthetree_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="diameterofthetree">
+		<div class="text-muted" >
+		{$tooltip app_tree diameterofthetree}
+		</div>
+	</div>
+</div>
+</div>
+{END diameterofthetree_fieldblock}
+
+			{BEGIN floweringtree_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_floweringtree}" data-fieldname="floweringtree" data-signal-error-for="floweringtree{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_floweringtree}">
+		{BEGIN floweringtree_label}{$label app_tree floweringtree}{END floweringtree_label}
+	</label>
+	<div class="col-md-6" >
+		{$floweringtree_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="floweringtree">
+		<div class="text-muted" >
+		{$tooltip app_tree floweringtree}
+		</div>
+	</div>
+</div>
+</div>
+{END floweringtree_fieldblock}
+
+			{BEGIN fruittree_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_fruittree}" data-fieldname="fruittree" data-signal-error-for="fruittree{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_fruittree}">
+		{BEGIN fruittree_label}{$label app_tree fruittree}{END fruittree_label}
+	</label>
+	<div class="col-md-6" >
+		{$fruittree_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="fruittree">
+		<div class="text-muted" >
+		{$tooltip app_tree fruittree}
+		</div>
+	</div>
+</div>
+</div>
+{END fruittree_fieldblock}
+
+			{BEGIN healthoftree_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_healthoftree}" data-fieldname="healthoftree" data-signal-error-for="healthoftree{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_healthoftree}">
+		{BEGIN healthoftree_label}{$label app_tree healthoftree}{END healthoftree_label}
+	</label>
+	<div class="col-md-6" >
+		{$healthoftree_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="healthoftree">
+		<div class="text-muted" >
+		{$tooltip app_tree healthoftree}
+		</div>
+	</div>
+</div>
+</div>
+{END healthoftree_fieldblock}
+
+			{BEGIN lastupdaterid_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_lastupdaterid}" data-fieldname="lastupdaterid" data-signal-error-for="lastupdaterid{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_lastupdaterid}">
+		{BEGIN lastupdaterid_label}{$label app_tree lastupdaterid}{END lastupdaterid_label}
+	</label>
+	<div class="col-md-6" >
+		{$lastupdaterid_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="lastupdaterid">
+		<div class="text-muted" >
+		{$tooltip app_tree lastupdaterid}
+		</div>
+	</div>
+</div>
+</div>
+{END lastupdaterid_fieldblock}
+
+			{BEGIN latitude_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_latitude}" data-fieldname="latitude" data-signal-error-for="latitude{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_latitude}">
+		{BEGIN latitude_label}{$label app_tree latitude}{END latitude_label}
+	</label>
+	<div class="col-md-6" >
+		{$latitude_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="latitude">
+		<div class="text-muted" >
+		{$tooltip app_tree latitude}
+		</div>
+	</div>
+</div>
+</div>
+{END latitude_fieldblock}
+
+			{BEGIN longitude_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_longitude}" data-fieldname="longitude" data-signal-error-for="longitude{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_longitude}">
+		{BEGIN longitude_label}{$label app_tree longitude}{END longitude_label}
+	</label>
+	<div class="col-md-6" >
+		{$longitude_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="longitude">
+		<div class="text-muted" >
+		{$tooltip app_tree longitude}
+		</div>
+	</div>
+</div>
+</div>
+{END longitude_fieldblock}
+
+			{BEGIN otherhazards_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_otherhazards}" data-fieldname="otherhazards" data-signal-error-for="otherhazards{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_otherhazards}">
+		{BEGIN otherhazards_label}{$label app_tree otherhazards}{END otherhazards_label}
+	</label>
+	<div class="col-md-6" >
+		{$otherhazards_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="otherhazards">
+		<div class="text-muted" >
+		{$tooltip app_tree otherhazards}
+		</div>
+	</div>
+</div>
+</div>
+{END otherhazards_fieldblock}
+
+			{BEGIN overheadhazzards_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_overheadhazzards}" data-fieldname="overheadhazzards" data-signal-error-for="overheadhazzards{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_overheadhazzards}">
+		{BEGIN overheadhazzards_label}{$label app_tree overheadhazzards}{END overheadhazzards_label}
+	</label>
+	<div class="col-md-6" >
+		{$overheadhazzards_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="overheadhazzards">
+		<div class="text-muted" >
+		{$tooltip app_tree overheadhazzards}
+		</div>
+	</div>
+</div>
+</div>
+{END overheadhazzards_fieldblock}
+
+			{BEGIN picoftreepit_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_picoftreepit}" data-fieldname="picoftreepit" data-signal-error-for="picoftreepit{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_picoftreepit}">
+		{BEGIN picoftreepit_label}{$label app_tree picoftreepit}{END picoftreepit_label}
+	</label>
+	<div class="col-md-6" >
+		{$picoftreepit_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="picoftreepit">
+		<div class="text-muted" >
+		{$tooltip app_tree picoftreepit}
+		</div>
+	</div>
+</div>
+</div>
+{END picoftreepit_fieldblock}
+
+			{BEGIN picofleaf_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_picofleaf}" data-fieldname="picofleaf" data-signal-error-for="picofleaf{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_picofleaf}">
+		{BEGIN picofleaf_label}{$label app_tree picofleaf}{END picofleaf_label}
+	</label>
+	<div class="col-md-6" >
+		{$picofleaf_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="picofleaf">
+		<div class="text-muted" >
+		{$tooltip app_tree picofleaf}
+		</div>
+	</div>
+</div>
+</div>
+{END picofleaf_fieldblock}
+
+			{BEGIN pictureoffloweringtree_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_pictureoffloweringtree}" data-fieldname="pictureoffloweringtree" data-signal-error-for="pictureoffloweringtree{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_pictureoffloweringtree}">
+		{BEGIN pictureoffloweringtree_label}{$label app_tree pictureoffloweringtree}{END pictureoffloweringtree_label}
+	</label>
+	<div class="col-md-6" >
+		{$pictureoffloweringtree_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="pictureoffloweringtree">
+		<div class="text-muted" >
+		{$tooltip app_tree pictureoffloweringtree}
+		</div>
+	</div>
+</div>
+</div>
+{END pictureoffloweringtree_fieldblock}
+
+			{BEGIN pictureoftree_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_pictureoftree}" data-fieldname="pictureoftree" data-signal-error-for="pictureoftree{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_pictureoftree}">
+		{BEGIN pictureoftree_label}{$label app_tree pictureoftree}{END pictureoftree_label}
+	</label>
+	<div class="col-md-6" >
+		{$pictureoftree_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="pictureoftree">
+		<div class="text-muted" >
+		{$tooltip app_tree pictureoftree}
+		</div>
+	</div>
+</div>
+</div>
+{END pictureoftree_fieldblock}
+
+			{BEGIN pictureoftreetrunk_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_pictureoftreetrunk}" data-fieldname="pictureoftreetrunk" data-signal-error-for="pictureoftreetrunk{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_pictureoftreetrunk}">
+		{BEGIN pictureoftreetrunk_label}{$label app_tree pictureoftreetrunk}{END pictureoftreetrunk_label}
+	</label>
+	<div class="col-md-6" >
+		{$pictureoftreetrunk_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="pictureoftreetrunk">
+		<div class="text-muted" >
+		{$tooltip app_tree pictureoftreetrunk}
+		</div>
+	</div>
+</div>
+</div>
+{END pictureoftreetrunk_fieldblock}
+
+			{BEGIN privateproperty_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_privateproperty}" data-fieldname="privateproperty" data-signal-error-for="privateproperty{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_privateproperty}">
+		{BEGIN privateproperty_label}{$label app_tree privateproperty}{END privateproperty_label}
+	</label>
+	<div class="col-md-6" >
+		{$privateproperty_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="privateproperty">
+		<div class="text-muted" >
+		{$tooltip app_tree privateproperty}
+		</div>
+	</div>
+</div>
+</div>
+{END privateproperty_fieldblock}
+
+			{BEGIN recordcreatorid_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_recordcreatorid}" data-fieldname="recordcreatorid" data-signal-error-for="recordcreatorid{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_recordcreatorid}">
+		{BEGIN recordcreatorid_label}{$label app_tree recordcreatorid}{END recordcreatorid_label}
+	</label>
+	<div class="col-md-6" >
+		{$recordcreatorid_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="recordcreatorid">
+		<div class="text-muted" >
+		{$tooltip app_tree recordcreatorid}
+		</div>
+	</div>
+</div>
+</div>
+{END recordcreatorid_fieldblock}
+
+			{BEGIN referencepictureoftree_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_referencepictureoftree}" data-fieldname="referencepictureoftree" data-signal-error-for="referencepictureoftree{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_referencepictureoftree}">
+		{BEGIN referencepictureoftree_label}{$label app_tree referencepictureoftree}{END referencepictureoftree_label}
+	</label>
+	<div class="col-md-6" >
+		{$referencepictureoftree_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="referencepictureoftree">
+		<div class="text-muted" >
+		{$tooltip app_tree referencepictureoftree}
+		</div>
+	</div>
+</div>
+</div>
+{END referencepictureoftree_fieldblock}
+
+			{BEGIN sizeoftree_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_sizeoftree}" data-fieldname="sizeoftree" data-signal-error-for="sizeoftree{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_sizeoftree}">
+		{BEGIN sizeoftree_label}{$label app_tree sizeoftree}{END sizeoftree_label}
+	</label>
+	<div class="col-md-6" >
+		{$sizeoftree_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="sizeoftree">
+		<div class="text-muted" >
+		{$tooltip app_tree sizeoftree}
+		</div>
+	</div>
+</div>
+</div>
+{END sizeoftree_fieldblock}
+
+			{BEGIN streetaddress_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_streetaddress}" data-fieldname="streetaddress" data-signal-error-for="streetaddress{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_streetaddress}">
+		{BEGIN streetaddress_label}{$label app_tree streetaddress}{END streetaddress_label}
+	</label>
+	<div class="col-md-6" >
+		{$streetaddress_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="streetaddress">
+		<div class="text-muted" >
+		{$tooltip app_tree streetaddress}
+		</div>
+	</div>
+</div>
+</div>
+{END streetaddress_fieldblock}
+
+			{BEGIN streettree_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_streettree}" data-fieldname="streettree" data-signal-error-for="streettree{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_streettree}">
+		{BEGIN streettree_label}{$label app_tree streettree}{END streettree_label}
+	</label>
+	<div class="col-md-6" >
+		{$streettree_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="streettree">
+		<div class="text-muted" >
+		{$tooltip app_tree streettree}
+		</div>
+	</div>
+</div>
+</div>
+{END streettree_fieldblock}
+
+			{BEGIN treeiconformap_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_treeiconformap}" data-fieldname="treeiconformap" data-signal-error-for="treeiconformap{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_treeiconformap}">
+		{BEGIN treeiconformap_label}{$label app_tree treeiconformap}{END treeiconformap_label}
+	</label>
+	<div class="col-md-6" >
+		{$treeiconformap_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="treeiconformap">
+		<div class="text-muted" >
+		{$tooltip app_tree treeiconformap}
+		</div>
+	</div>
+</div>
+</div>
+{END treeiconformap_fieldblock}
+
+			{BEGIN treepitcondition_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_treepitcondition}" data-fieldname="treepitcondition" data-signal-error-for="treepitcondition{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_treepitcondition}">
+		{BEGIN treepitcondition_label}{$label app_tree treepitcondition}{END treepitcondition_label}
+	</label>
+	<div class="col-md-6" >
+		{$treepitcondition_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="treepitcondition">
+		<div class="text-muted" >
+		{$tooltip app_tree treepitcondition}
+		</div>
+	</div>
+</div>
+</div>
+{END treepitcondition_fieldblock}
+
+			{BEGIN treetype_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_treetype}" data-fieldname="treetype" data-signal-error-for="treetype{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_treetype}">
+		{BEGIN treetype_label}{$label app_tree treetype}{END treetype_label}
+	</label>
+	<div class="col-md-6" >
+		{$treetype_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="treetype">
+		<div class="text-muted" >
+		{$tooltip app_tree treetype}
+		</div>
+	</div>
+</div>
+</div>
+{END treetype_fieldblock}
+
+			{BEGIN whenplanted_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_whenplanted}" data-fieldname="whenplanted" data-signal-error-for="whenplanted{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_whenplanted}">
+		{BEGIN whenplanted_label}{$label app_tree whenplanted}{END whenplanted_label}
+	</label>
+	<div class="col-md-6" >
+		{$whenplanted_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="whenplanted">
+		<div class="text-muted" >
+		{$tooltip app_tree whenplanted}
+		</div>
+	</div>
+</div>
+</div>
+{END whenplanted_fieldblock}
+
+			{BEGIN treetype_id_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_treetype_id}" data-fieldname="treetype_id" data-signal-error-for="treetype_id{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_treetype_id}">
+		{BEGIN treetype_id_label}{$label app_tree treetype_id}{END treetype_id_label}
+	</label>
+	<div class="col-md-6" >
+		{$treetype_id_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="treetype_id">
+		<div class="text-muted" >
+		{$tooltip app_tree treetype_id}
+		</div>
+	</div>
+</div>
+</div>
+{END treetype_id_fieldblock}
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN editbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>Save</button>
+	{END save_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" {$backbutton_attrs}>Back to list</button>
+	{END back_button}
+	{BEGIN close_button}
+	<a href="#" class="btn btn-default" {$closebutton_attrs}>Cancel</a>
+	{END close_button}
+
+{END editbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="  text-right col-md-3 "> 
+
+{BEGIN righteditbuttons}
+<div class="btn-group" role="group">
+
+	{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default  {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+			{BEGIN reset_button}
+				<li><a href="#" {$resetbutton_attrs}>Reset</a></li>
+			{END reset_button}
+			{BEGIN view_page_button}
+				<li><a href="#" {$view_page_button_attrs}>View</a></li>
+			{END view_page_button}
+		</ul>
+	</div>
+</div>
+{END righteditbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

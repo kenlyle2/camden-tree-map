@@ -1,0 +1,475 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-view" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_viewpage}
+<div {$viewpage_chiddenattr} data-pageid="{$pageid}" data-container="viewpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-12 "> 
+
+{BEGIN viewheader}
+	<h2 {$viewheader_hiddenattr} data-pageid="{$pageid}" data-brick="viewheader" >{$pagetitlelabel app_tree view}</h2>
+
+{END viewheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_viewpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class=" form-horizontal  col-md-12 "> 
+
+
+<div {$viewfields_hiddenattr} data-pageid="{$pageid}" data-brick="viewfields" >
+
+	<div class="container">
+					{BEGIN id_fieldblock}
+	<div class="{$fielddispclass_id} col-md-6 bs-viewcontrolgroup" data-fieldname="id">
+		<label class="control-label" for="{$labelfor_id}">
+			{$label app_tree id}
+		</label>
+		<div class="" >
+			{$id_value}&nbsp;
+		</div>
+	</div>
+{END id_fieldblock}
+					{BEGIN gpslocation_fieldblock}
+	<div class="{$fielddispclass_gpslocation} col-md-6 bs-viewcontrolgroup" data-fieldname="gpslocation">
+		<label class="control-label" for="{$labelfor_gpslocation}">
+			{$label app_tree gpslocation}
+		</label>
+		<div class="" >
+			{$gpslocation_value}&nbsp;
+		</div>
+	</div>
+{END gpslocation_fieldblock}
+					{BEGIN cityproperty_fieldblock}
+	<div class="{$fielddispclass_cityproperty} col-md-6 bs-viewcontrolgroup" data-fieldname="cityproperty">
+		<label class="control-label" for="{$labelfor_cityproperty}">
+			{$label app_tree cityproperty}
+		</label>
+		<div class="" >
+			{$cityproperty_value}&nbsp;
+		</div>
+	</div>
+{END cityproperty_fieldblock}
+					{BEGIN datelastupdated_fieldblock}
+	<div class="{$fielddispclass_datelastupdated} col-md-6 bs-viewcontrolgroup" data-fieldname="datelastupdated">
+		<label class="control-label" for="{$labelfor_datelastupdated}">
+			{$label app_tree datelastupdated}
+		</label>
+		<div class="" >
+			{$datelastupdated_value}&nbsp;
+		</div>
+	</div>
+{END datelastupdated_fieldblock}
+					{BEGIN dateofinitialcreationofentry_fieldblock}
+	<div class="{$fielddispclass_dateofinitialcreationofentry} col-md-6 bs-viewcontrolgroup" data-fieldname="dateofinitialcreationofentry">
+		<label class="control-label" for="{$labelfor_dateofinitialcreationofentry}">
+			{$label app_tree dateofinitialcreationofentry}
+		</label>
+		<div class="" >
+			{$dateofinitialcreationofentry_value}&nbsp;
+		</div>
+	</div>
+{END dateofinitialcreationofentry_fieldblock}
+					{BEGIN diameterofthetree_fieldblock}
+	<div class="{$fielddispclass_diameterofthetree} col-md-6 bs-viewcontrolgroup" data-fieldname="diameterofthetree">
+		<label class="control-label" for="{$labelfor_diameterofthetree}">
+			{$label app_tree diameterofthetree}
+		</label>
+		<div class="" >
+			{$diameterofthetree_value}&nbsp;
+		</div>
+	</div>
+{END diameterofthetree_fieldblock}
+					{BEGIN floweringtree_fieldblock}
+	<div class="{$fielddispclass_floweringtree} col-md-6 bs-viewcontrolgroup" data-fieldname="floweringtree">
+		<label class="control-label" for="{$labelfor_floweringtree}">
+			{$label app_tree floweringtree}
+		</label>
+		<div class="" >
+			{$floweringtree_value}&nbsp;
+		</div>
+	</div>
+{END floweringtree_fieldblock}
+					{BEGIN fruittree_fieldblock}
+	<div class="{$fielddispclass_fruittree} col-md-6 bs-viewcontrolgroup" data-fieldname="fruittree">
+		<label class="control-label" for="{$labelfor_fruittree}">
+			{$label app_tree fruittree}
+		</label>
+		<div class="" >
+			{$fruittree_value}&nbsp;
+		</div>
+	</div>
+{END fruittree_fieldblock}
+					{BEGIN healthoftree_fieldblock}
+	<div class="{$fielddispclass_healthoftree} col-md-6 bs-viewcontrolgroup" data-fieldname="healthoftree">
+		<label class="control-label" for="{$labelfor_healthoftree}">
+			{$label app_tree healthoftree}
+		</label>
+		<div class="" >
+			{$healthoftree_value}&nbsp;
+		</div>
+	</div>
+{END healthoftree_fieldblock}
+					{BEGIN lastupdaterid_fieldblock}
+	<div class="{$fielddispclass_lastupdaterid} col-md-6 bs-viewcontrolgroup" data-fieldname="lastupdaterid">
+		<label class="control-label" for="{$labelfor_lastupdaterid}">
+			{$label app_tree lastupdaterid}
+		</label>
+		<div class="" >
+			{$lastupdaterid_value}&nbsp;
+		</div>
+	</div>
+{END lastupdaterid_fieldblock}
+					{BEGIN latitude_fieldblock}
+	<div class="{$fielddispclass_latitude} col-md-6 bs-viewcontrolgroup" data-fieldname="latitude">
+		<label class="control-label" for="{$labelfor_latitude}">
+			{$label app_tree latitude}
+		</label>
+		<div class="" >
+			{$latitude_value}&nbsp;
+		</div>
+	</div>
+{END latitude_fieldblock}
+					{BEGIN longitude_fieldblock}
+	<div class="{$fielddispclass_longitude} col-md-6 bs-viewcontrolgroup" data-fieldname="longitude">
+		<label class="control-label" for="{$labelfor_longitude}">
+			{$label app_tree longitude}
+		</label>
+		<div class="" >
+			{$longitude_value}&nbsp;
+		</div>
+	</div>
+{END longitude_fieldblock}
+					{BEGIN otherhazards_fieldblock}
+	<div class="{$fielddispclass_otherhazards} col-md-6 bs-viewcontrolgroup" data-fieldname="otherhazards">
+		<label class="control-label" for="{$labelfor_otherhazards}">
+			{$label app_tree otherhazards}
+		</label>
+		<div class="" >
+			{$otherhazards_value}&nbsp;
+		</div>
+	</div>
+{END otherhazards_fieldblock}
+					{BEGIN overheadhazzards_fieldblock}
+	<div class="{$fielddispclass_overheadhazzards} col-md-6 bs-viewcontrolgroup" data-fieldname="overheadhazzards">
+		<label class="control-label" for="{$labelfor_overheadhazzards}">
+			{$label app_tree overheadhazzards}
+		</label>
+		<div class="" >
+			{$overheadhazzards_value}&nbsp;
+		</div>
+	</div>
+{END overheadhazzards_fieldblock}
+					{BEGIN picoftreepit_fieldblock}
+	<div class="{$fielddispclass_picoftreepit} col-md-6 bs-viewcontrolgroup" data-fieldname="picoftreepit">
+		<label class="control-label" for="{$labelfor_picoftreepit}">
+			{$label app_tree picoftreepit}
+		</label>
+		<div class="" >
+			{$picoftreepit_value}&nbsp;
+		</div>
+	</div>
+{END picoftreepit_fieldblock}
+					{BEGIN picofleaf_fieldblock}
+	<div class="{$fielddispclass_picofleaf} col-md-6 bs-viewcontrolgroup" data-fieldname="picofleaf">
+		<label class="control-label" for="{$labelfor_picofleaf}">
+			{$label app_tree picofleaf}
+		</label>
+		<div class="" >
+			{$picofleaf_value}&nbsp;
+		</div>
+	</div>
+{END picofleaf_fieldblock}
+					{BEGIN pictureoffloweringtree_fieldblock}
+	<div class="{$fielddispclass_pictureoffloweringtree} col-md-6 bs-viewcontrolgroup" data-fieldname="pictureoffloweringtree">
+		<label class="control-label" for="{$labelfor_pictureoffloweringtree}">
+			{$label app_tree pictureoffloweringtree}
+		</label>
+		<div class="" >
+			{$pictureoffloweringtree_value}&nbsp;
+		</div>
+	</div>
+{END pictureoffloweringtree_fieldblock}
+					{BEGIN pictureoftree_fieldblock}
+	<div class="{$fielddispclass_pictureoftree} col-md-6 bs-viewcontrolgroup" data-fieldname="pictureoftree">
+		<label class="control-label" for="{$labelfor_pictureoftree}">
+			{$label app_tree pictureoftree}
+		</label>
+		<div class="" >
+			{$pictureoftree_value}&nbsp;
+		</div>
+	</div>
+{END pictureoftree_fieldblock}
+					{BEGIN pictureoftreetrunk_fieldblock}
+	<div class="{$fielddispclass_pictureoftreetrunk} col-md-6 bs-viewcontrolgroup" data-fieldname="pictureoftreetrunk">
+		<label class="control-label" for="{$labelfor_pictureoftreetrunk}">
+			{$label app_tree pictureoftreetrunk}
+		</label>
+		<div class="" >
+			{$pictureoftreetrunk_value}&nbsp;
+		</div>
+	</div>
+{END pictureoftreetrunk_fieldblock}
+					{BEGIN privateproperty_fieldblock}
+	<div class="{$fielddispclass_privateproperty} col-md-6 bs-viewcontrolgroup" data-fieldname="privateproperty">
+		<label class="control-label" for="{$labelfor_privateproperty}">
+			{$label app_tree privateproperty}
+		</label>
+		<div class="" >
+			{$privateproperty_value}&nbsp;
+		</div>
+	</div>
+{END privateproperty_fieldblock}
+					{BEGIN recordcreatorid_fieldblock}
+	<div class="{$fielddispclass_recordcreatorid} col-md-6 bs-viewcontrolgroup" data-fieldname="recordcreatorid">
+		<label class="control-label" for="{$labelfor_recordcreatorid}">
+			{$label app_tree recordcreatorid}
+		</label>
+		<div class="" >
+			{$recordcreatorid_value}&nbsp;
+		</div>
+	</div>
+{END recordcreatorid_fieldblock}
+					{BEGIN referencepictureoftree_fieldblock}
+	<div class="{$fielddispclass_referencepictureoftree} col-md-6 bs-viewcontrolgroup" data-fieldname="referencepictureoftree">
+		<label class="control-label" for="{$labelfor_referencepictureoftree}">
+			{$label app_tree referencepictureoftree}
+		</label>
+		<div class="" >
+			{$referencepictureoftree_value}&nbsp;
+		</div>
+	</div>
+{END referencepictureoftree_fieldblock}
+					{BEGIN sizeoftree_fieldblock}
+	<div class="{$fielddispclass_sizeoftree} col-md-6 bs-viewcontrolgroup" data-fieldname="sizeoftree">
+		<label class="control-label" for="{$labelfor_sizeoftree}">
+			{$label app_tree sizeoftree}
+		</label>
+		<div class="" >
+			{$sizeoftree_value}&nbsp;
+		</div>
+	</div>
+{END sizeoftree_fieldblock}
+					{BEGIN streetaddress_fieldblock}
+	<div class="{$fielddispclass_streetaddress} col-md-6 bs-viewcontrolgroup" data-fieldname="streetaddress">
+		<label class="control-label" for="{$labelfor_streetaddress}">
+			{$label app_tree streetaddress}
+		</label>
+		<div class="" >
+			{$streetaddress_value}&nbsp;
+		</div>
+	</div>
+{END streetaddress_fieldblock}
+					{BEGIN streettree_fieldblock}
+	<div class="{$fielddispclass_streettree} col-md-6 bs-viewcontrolgroup" data-fieldname="streettree">
+		<label class="control-label" for="{$labelfor_streettree}">
+			{$label app_tree streettree}
+		</label>
+		<div class="" >
+			{$streettree_value}&nbsp;
+		</div>
+	</div>
+{END streettree_fieldblock}
+					{BEGIN treeiconformap_fieldblock}
+	<div class="{$fielddispclass_treeiconformap} col-md-6 bs-viewcontrolgroup" data-fieldname="treeiconformap">
+		<label class="control-label" for="{$labelfor_treeiconformap}">
+			{$label app_tree treeiconformap}
+		</label>
+		<div class="" >
+			{$treeiconformap_value}&nbsp;
+		</div>
+	</div>
+{END treeiconformap_fieldblock}
+					{BEGIN treepitcondition_fieldblock}
+	<div class="{$fielddispclass_treepitcondition} col-md-6 bs-viewcontrolgroup" data-fieldname="treepitcondition">
+		<label class="control-label" for="{$labelfor_treepitcondition}">
+			{$label app_tree treepitcondition}
+		</label>
+		<div class="" >
+			{$treepitcondition_value}&nbsp;
+		</div>
+	</div>
+{END treepitcondition_fieldblock}
+					{BEGIN treetype_fieldblock}
+	<div class="{$fielddispclass_treetype} col-md-6 bs-viewcontrolgroup" data-fieldname="treetype">
+		<label class="control-label" for="{$labelfor_treetype}">
+			{$label app_tree treetype}
+		</label>
+		<div class="" >
+			{$treetype_value}&nbsp;
+		</div>
+	</div>
+{END treetype_fieldblock}
+					{BEGIN whenplanted_fieldblock}
+	<div class="{$fielddispclass_whenplanted} col-md-6 bs-viewcontrolgroup" data-fieldname="whenplanted">
+		<label class="control-label" for="{$labelfor_whenplanted}">
+			{$label app_tree whenplanted}
+		</label>
+		<div class="" >
+			{$whenplanted_value}&nbsp;
+		</div>
+	</div>
+{END whenplanted_fieldblock}
+					{BEGIN treetype_id_fieldblock}
+	<div class="{$fielddispclass_treetype_id} col-md-6 bs-viewcontrolgroup" data-fieldname="treetype_id">
+		<label class="control-label" for="{$labelfor_treetype_id}">
+			{$label app_tree treetype_id}
+		</label>
+		<div class="" >
+			{$treetype_id_value}&nbsp;
+		</div>
+	</div>
+{END treetype_id_fieldblock}
+	</div>
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-6 "> 
+
+{BEGIN viewbuttons}
+{BEGIN back_button}
+<button class="btn btn-primary" {$backbutton_attrs}>Back to list</button>
+{END back_button}
+{BEGIN close_button}
+<button href="#" class="btn btn-primary" {$closebutton_attrs}>Close window</button>
+{END close_button}
+{END viewbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="   col-md-4 "> 
+
+{BEGIN rightviewbuttons}
+<div class="btn-group" role="group">
+		{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+									{BEGIN edit_page_button}
+				<li><a href=# {$edit_page_button_attrs}>Edit</a></li>
+			{END edit_page_button}
+		</ul>
+	</div>
+</div>
+{END rightviewbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

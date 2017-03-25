@@ -1,0 +1,692 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_searchpage}
+<div {$searchpage_chiddenattr} data-pageid="{$pageid}" data-container="searchpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN searchheader}
+	<h2 {$bssearchheader_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchheader" >{$pagetitlelabel app_tree search}</h2>
+
+{END searchheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_searchpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$bssearchfields_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchfields" class="form-horizontal" role="form">
+<div class="container">
+	<div class="form-group">
+		<div class="col-md-12" >
+			&nbsp;
+		</div>
+	</div>
+</div>
+	{BEGIN id_fieldblock}		
+	<div class="container {$fielddispclass_id}" data-fieldname="id">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label app_tree id}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_id}
+			</div>
+			<div class="col-md-4" >
+				{$id_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$id_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END id_fieldblock}
+	{BEGIN gpslocation_fieldblock}		
+	<div class="container {$fielddispclass_gpslocation}" data-fieldname="gpslocation">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label app_tree gpslocation}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_gpslocation}
+			</div>
+			<div class="col-md-4" >
+				{$gpslocation_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$gpslocation_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END gpslocation_fieldblock}
+	{BEGIN cityproperty_fieldblock}		
+	<div class="container {$fielddispclass_cityproperty}" data-fieldname="cityproperty">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label app_tree cityproperty}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_cityproperty}
+			</div>
+			<div class="col-md-4" >
+				{$cityproperty_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$cityproperty_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END cityproperty_fieldblock}
+	{BEGIN datelastupdated_fieldblock}		
+	<div class="container {$fielddispclass_datelastupdated}" data-fieldname="datelastupdated">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label app_tree datelastupdated}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_datelastupdated}
+			</div>
+			<div class="col-md-4" >
+				{$datelastupdated_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$datelastupdated_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END datelastupdated_fieldblock}
+	{BEGIN dateofinitialcreationofentry_fieldblock}		
+	<div class="container {$fielddispclass_dateofinitialcreationofentry}" data-fieldname="dateofinitialcreationofentry">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label app_tree dateofinitialcreationofentry}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_dateofinitialcreationofentry}
+			</div>
+			<div class="col-md-4" >
+				{$dateofinitialcreationofentry_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$dateofinitialcreationofentry_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END dateofinitialcreationofentry_fieldblock}
+	{BEGIN diameterofthetree_fieldblock}		
+	<div class="container {$fielddispclass_diameterofthetree}" data-fieldname="diameterofthetree">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label app_tree diameterofthetree}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_diameterofthetree}
+			</div>
+			<div class="col-md-4" >
+				{$diameterofthetree_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$diameterofthetree_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END diameterofthetree_fieldblock}
+	{BEGIN floweringtree_fieldblock}		
+	<div class="container {$fielddispclass_floweringtree}" data-fieldname="floweringtree">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label app_tree floweringtree}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_floweringtree}
+			</div>
+			<div class="col-md-4" >
+				{$floweringtree_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$floweringtree_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END floweringtree_fieldblock}
+	{BEGIN fruittree_fieldblock}		
+	<div class="container {$fielddispclass_fruittree}" data-fieldname="fruittree">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label app_tree fruittree}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_fruittree}
+			</div>
+			<div class="col-md-4" >
+				{$fruittree_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$fruittree_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END fruittree_fieldblock}
+	{BEGIN healthoftree_fieldblock}		
+	<div class="container {$fielddispclass_healthoftree}" data-fieldname="healthoftree">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label app_tree healthoftree}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_healthoftree}
+			</div>
+			<div class="col-md-4" >
+				{$healthoftree_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$healthoftree_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END healthoftree_fieldblock}
+	{BEGIN lastupdaterid_fieldblock}		
+	<div class="container {$fielddispclass_lastupdaterid}" data-fieldname="lastupdaterid">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label app_tree lastupdaterid}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_lastupdaterid}
+			</div>
+			<div class="col-md-4" >
+				{$lastupdaterid_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$lastupdaterid_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END lastupdaterid_fieldblock}
+	{BEGIN latitude_fieldblock}		
+	<div class="container {$fielddispclass_latitude}" data-fieldname="latitude">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label app_tree latitude}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_latitude}
+			</div>
+			<div class="col-md-4" >
+				{$latitude_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$latitude_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END latitude_fieldblock}
+	{BEGIN longitude_fieldblock}		
+	<div class="container {$fielddispclass_longitude}" data-fieldname="longitude">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label app_tree longitude}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_longitude}
+			</div>
+			<div class="col-md-4" >
+				{$longitude_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$longitude_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END longitude_fieldblock}
+	{BEGIN otherhazards_fieldblock}		
+	<div class="container {$fielddispclass_otherhazards}" data-fieldname="otherhazards">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label app_tree otherhazards}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_otherhazards}
+			</div>
+			<div class="col-md-4" >
+				{$otherhazards_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$otherhazards_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END otherhazards_fieldblock}
+	{BEGIN overheadhazzards_fieldblock}		
+	<div class="container {$fielddispclass_overheadhazzards}" data-fieldname="overheadhazzards">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label app_tree overheadhazzards}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_overheadhazzards}
+			</div>
+			<div class="col-md-4" >
+				{$overheadhazzards_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$overheadhazzards_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END overheadhazzards_fieldblock}
+	{BEGIN picoftreepit_fieldblock}		
+	<div class="container {$fielddispclass_picoftreepit}" data-fieldname="picoftreepit">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label app_tree picoftreepit}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_picoftreepit}
+			</div>
+			<div class="col-md-4" >
+				{$picoftreepit_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$picoftreepit_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END picoftreepit_fieldblock}
+	{BEGIN picofleaf_fieldblock}		
+	<div class="container {$fielddispclass_picofleaf}" data-fieldname="picofleaf">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label app_tree picofleaf}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_picofleaf}
+			</div>
+			<div class="col-md-4" >
+				{$picofleaf_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$picofleaf_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END picofleaf_fieldblock}
+	{BEGIN pictureoffloweringtree_fieldblock}		
+	<div class="container {$fielddispclass_pictureoffloweringtree}" data-fieldname="pictureoffloweringtree">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label app_tree pictureoffloweringtree}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_pictureoffloweringtree}
+			</div>
+			<div class="col-md-4" >
+				{$pictureoffloweringtree_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$pictureoffloweringtree_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END pictureoffloweringtree_fieldblock}
+	{BEGIN pictureoftree_fieldblock}		
+	<div class="container {$fielddispclass_pictureoftree}" data-fieldname="pictureoftree">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label app_tree pictureoftree}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_pictureoftree}
+			</div>
+			<div class="col-md-4" >
+				{$pictureoftree_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$pictureoftree_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END pictureoftree_fieldblock}
+	{BEGIN pictureoftreetrunk_fieldblock}		
+	<div class="container {$fielddispclass_pictureoftreetrunk}" data-fieldname="pictureoftreetrunk">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label app_tree pictureoftreetrunk}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_pictureoftreetrunk}
+			</div>
+			<div class="col-md-4" >
+				{$pictureoftreetrunk_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$pictureoftreetrunk_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END pictureoftreetrunk_fieldblock}
+	{BEGIN privateproperty_fieldblock}		
+	<div class="container {$fielddispclass_privateproperty}" data-fieldname="privateproperty">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label app_tree privateproperty}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_privateproperty}
+			</div>
+			<div class="col-md-4" >
+				{$privateproperty_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$privateproperty_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END privateproperty_fieldblock}
+	{BEGIN recordcreatorid_fieldblock}		
+	<div class="container {$fielddispclass_recordcreatorid}" data-fieldname="recordcreatorid">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label app_tree recordcreatorid}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_recordcreatorid}
+			</div>
+			<div class="col-md-4" >
+				{$recordcreatorid_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$recordcreatorid_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END recordcreatorid_fieldblock}
+	{BEGIN referencepictureoftree_fieldblock}		
+	<div class="container {$fielddispclass_referencepictureoftree}" data-fieldname="referencepictureoftree">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label app_tree referencepictureoftree}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_referencepictureoftree}
+			</div>
+			<div class="col-md-4" >
+				{$referencepictureoftree_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$referencepictureoftree_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END referencepictureoftree_fieldblock}
+	{BEGIN sizeoftree_fieldblock}		
+	<div class="container {$fielddispclass_sizeoftree}" data-fieldname="sizeoftree">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label app_tree sizeoftree}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_sizeoftree}
+			</div>
+			<div class="col-md-4" >
+				{$sizeoftree_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$sizeoftree_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END sizeoftree_fieldblock}
+	{BEGIN streetaddress_fieldblock}		
+	<div class="container {$fielddispclass_streetaddress}" data-fieldname="streetaddress">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label app_tree streetaddress}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_streetaddress}
+			</div>
+			<div class="col-md-4" >
+				{$streetaddress_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$streetaddress_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END streetaddress_fieldblock}
+	{BEGIN streettree_fieldblock}		
+	<div class="container {$fielddispclass_streettree}" data-fieldname="streettree">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label app_tree streettree}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_streettree}
+			</div>
+			<div class="col-md-4" >
+				{$streettree_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$streettree_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END streettree_fieldblock}
+	{BEGIN treeiconformap_fieldblock}		
+	<div class="container {$fielddispclass_treeiconformap}" data-fieldname="treeiconformap">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label app_tree treeiconformap}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_treeiconformap}
+			</div>
+			<div class="col-md-4" >
+				{$treeiconformap_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$treeiconformap_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END treeiconformap_fieldblock}
+	{BEGIN treepitcondition_fieldblock}		
+	<div class="container {$fielddispclass_treepitcondition}" data-fieldname="treepitcondition">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label app_tree treepitcondition}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_treepitcondition}
+			</div>
+			<div class="col-md-4" >
+				{$treepitcondition_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$treepitcondition_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END treepitcondition_fieldblock}
+	{BEGIN treestreetaddress_fieldblock}		
+	<div class="container {$fielddispclass_treestreetaddress}" data-fieldname="treestreetaddress">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label app_tree treestreetaddress}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_treestreetaddress}
+			</div>
+			<div class="col-md-4" >
+				{$treestreetaddress_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$treestreetaddress_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END treestreetaddress_fieldblock}
+	{BEGIN treetype_fieldblock}		
+	<div class="container {$fielddispclass_treetype}" data-fieldname="treetype">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label app_tree treetype}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_treetype}
+			</div>
+			<div class="col-md-4" >
+				{$treetype_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$treetype_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END treetype_fieldblock}
+	{BEGIN whenplanted_fieldblock}		
+	<div class="container {$fielddispclass_whenplanted}" data-fieldname="whenplanted">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label app_tree whenplanted}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_whenplanted}
+			</div>
+			<div class="col-md-4" >
+				{$whenplanted_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$whenplanted_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END whenplanted_fieldblock}
+	{BEGIN treetype_id_fieldblock}		
+	<div class="container {$fielddispclass_treetype_id}" data-fieldname="treetype_id">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label app_tree treetype_id}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_treetype_id}
+			</div>
+			<div class="col-md-4" >
+				{$treetype_id_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$treetype_id_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END treetype_id_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-4"> 
+
+{BEGIN searchbuttons}
+{BEGIN search_button}
+<button class="btn btn-primary" {$searchbutton_attrs}>Search</button>
+{END search_button} 
+{BEGIN reset_button}
+<button class="btn btn-default" {$resetbutton_attrs}>Reset</button>
+{END reset_button}
+{BEGIN back_button}
+<button class="btn btn-default" {$backbutton_attrs}>Back to list</button>
+{END back_button}
+{END searchbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

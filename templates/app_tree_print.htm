@@ -1,0 +1,442 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+{BEGIN container_master}
+<div {$master_chiddenattr} data-pageid="{$pageid}" data-container="master" class="    "> 
+
+{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+	{$master_heading}
+	</div>
+	<div class="panel-body">
+{$showmasterfile}
+	</div>
+</div>
+
+{END mastertable_block}
+
+
+
+</div>
+{END container_master}
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel app_tree print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>Page <span class="rp-pageno">{$pageno}</span> of <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN id_fieldheadercolumn}
+			<th class="{$id_class}" {$id_style}>
+				{$label app_tree id}
+			</th>
+			{END id_fieldheadercolumn}
+			{BEGIN gpslocation_fieldheadercolumn}
+			<th class="{$gpslocation_class}" {$gpslocation_style}>
+				{$label app_tree gpslocation}
+			</th>
+			{END gpslocation_fieldheadercolumn}
+			{BEGIN cityproperty_fieldheadercolumn}
+			<th class="{$cityproperty_class}" {$cityproperty_style}>
+				{$label app_tree cityproperty}
+			</th>
+			{END cityproperty_fieldheadercolumn}
+			{BEGIN datelastupdated_fieldheadercolumn}
+			<th class="{$datelastupdated_class}" {$datelastupdated_style}>
+				{$label app_tree datelastupdated}
+			</th>
+			{END datelastupdated_fieldheadercolumn}
+			{BEGIN dateofinitialcreationofentry_fieldheadercolumn}
+			<th class="{$dateofinitialcreationofentry_class}" {$dateofinitialcreationofentry_style}>
+				{$label app_tree dateofinitialcreationofentry}
+			</th>
+			{END dateofinitialcreationofentry_fieldheadercolumn}
+			{BEGIN diameterofthetree_fieldheadercolumn}
+			<th class="{$diameterofthetree_class}" {$diameterofthetree_style}>
+				{$label app_tree diameterofthetree}
+			</th>
+			{END diameterofthetree_fieldheadercolumn}
+			{BEGIN floweringtree_fieldheadercolumn}
+			<th class="{$floweringtree_class}" {$floweringtree_style}>
+				{$label app_tree floweringtree}
+			</th>
+			{END floweringtree_fieldheadercolumn}
+			{BEGIN fruittree_fieldheadercolumn}
+			<th class="{$fruittree_class}" {$fruittree_style}>
+				{$label app_tree fruittree}
+			</th>
+			{END fruittree_fieldheadercolumn}
+			{BEGIN healthoftree_fieldheadercolumn}
+			<th class="{$healthoftree_class}" {$healthoftree_style}>
+				{$label app_tree healthoftree}
+			</th>
+			{END healthoftree_fieldheadercolumn}
+			{BEGIN lastupdaterid_fieldheadercolumn}
+			<th class="{$lastupdaterid_class}" {$lastupdaterid_style}>
+				{$label app_tree lastupdaterid}
+			</th>
+			{END lastupdaterid_fieldheadercolumn}
+			{BEGIN latitude_fieldheadercolumn}
+			<th class="{$latitude_class}" {$latitude_style}>
+				{$label app_tree latitude}
+			</th>
+			{END latitude_fieldheadercolumn}
+			{BEGIN longitude_fieldheadercolumn}
+			<th class="{$longitude_class}" {$longitude_style}>
+				{$label app_tree longitude}
+			</th>
+			{END longitude_fieldheadercolumn}
+			{BEGIN otherhazards_fieldheadercolumn}
+			<th class="{$otherhazards_class}" {$otherhazards_style}>
+				{$label app_tree otherhazards}
+			</th>
+			{END otherhazards_fieldheadercolumn}
+			{BEGIN overheadhazzards_fieldheadercolumn}
+			<th class="{$overheadhazzards_class}" {$overheadhazzards_style}>
+				{$label app_tree overheadhazzards}
+			</th>
+			{END overheadhazzards_fieldheadercolumn}
+			{BEGIN picoftreepit_fieldheadercolumn}
+			<th class="{$picoftreepit_class}" {$picoftreepit_style}>
+				{$label app_tree picoftreepit}
+			</th>
+			{END picoftreepit_fieldheadercolumn}
+			{BEGIN picofleaf_fieldheadercolumn}
+			<th class="{$picofleaf_class}" {$picofleaf_style}>
+				{$label app_tree picofleaf}
+			</th>
+			{END picofleaf_fieldheadercolumn}
+			{BEGIN pictureoffloweringtree_fieldheadercolumn}
+			<th class="{$pictureoffloweringtree_class}" {$pictureoffloweringtree_style}>
+				{$label app_tree pictureoffloweringtree}
+			</th>
+			{END pictureoffloweringtree_fieldheadercolumn}
+			{BEGIN pictureoftree_fieldheadercolumn}
+			<th class="{$pictureoftree_class}" {$pictureoftree_style}>
+				{$label app_tree pictureoftree}
+			</th>
+			{END pictureoftree_fieldheadercolumn}
+			{BEGIN pictureoftreetrunk_fieldheadercolumn}
+			<th class="{$pictureoftreetrunk_class}" {$pictureoftreetrunk_style}>
+				{$label app_tree pictureoftreetrunk}
+			</th>
+			{END pictureoftreetrunk_fieldheadercolumn}
+			{BEGIN privateproperty_fieldheadercolumn}
+			<th class="{$privateproperty_class}" {$privateproperty_style}>
+				{$label app_tree privateproperty}
+			</th>
+			{END privateproperty_fieldheadercolumn}
+			{BEGIN recordcreatorid_fieldheadercolumn}
+			<th class="{$recordcreatorid_class}" {$recordcreatorid_style}>
+				{$label app_tree recordcreatorid}
+			</th>
+			{END recordcreatorid_fieldheadercolumn}
+			{BEGIN referencepictureoftree_fieldheadercolumn}
+			<th class="{$referencepictureoftree_class}" {$referencepictureoftree_style}>
+				{$label app_tree referencepictureoftree}
+			</th>
+			{END referencepictureoftree_fieldheadercolumn}
+			{BEGIN sizeoftree_fieldheadercolumn}
+			<th class="{$sizeoftree_class}" {$sizeoftree_style}>
+				{$label app_tree sizeoftree}
+			</th>
+			{END sizeoftree_fieldheadercolumn}
+			{BEGIN streetaddress_fieldheadercolumn}
+			<th class="{$streetaddress_class}" {$streetaddress_style}>
+				{$label app_tree streetaddress}
+			</th>
+			{END streetaddress_fieldheadercolumn}
+			{BEGIN streettree_fieldheadercolumn}
+			<th class="{$streettree_class}" {$streettree_style}>
+				{$label app_tree streettree}
+			</th>
+			{END streettree_fieldheadercolumn}
+			{BEGIN treeiconformap_fieldheadercolumn}
+			<th class="{$treeiconformap_class}" {$treeiconformap_style}>
+				{$label app_tree treeiconformap}
+			</th>
+			{END treeiconformap_fieldheadercolumn}
+			{BEGIN treepitcondition_fieldheadercolumn}
+			<th class="{$treepitcondition_class}" {$treepitcondition_style}>
+				{$label app_tree treepitcondition}
+			</th>
+			{END treepitcondition_fieldheadercolumn}
+			{BEGIN treetype_fieldheadercolumn}
+			<th class="{$treetype_class}" {$treetype_style}>
+				{$label app_tree treetype}
+			</th>
+			{END treetype_fieldheadercolumn}
+			{BEGIN whenplanted_fieldheadercolumn}
+			<th class="{$whenplanted_class}" {$whenplanted_style}>
+				{$label app_tree whenplanted}
+			</th>
+			{END whenplanted_fieldheadercolumn}
+			{BEGIN treetype_id_fieldheadercolumn}
+			<th class="{$treetype_id_class}" {$treetype_id_style}>
+				{$label app_tree treetype_id}
+			</th>
+			{END treetype_id_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN id_fieldcolumn}
+			<td  class="{$id_class}" {$id_style} {$recordattrs}>
+				{$id_value}
+			</td>
+			{END id_fieldcolumn}
+			{BEGIN gpslocation_fieldcolumn}
+			<td  class="{$gpslocation_class}" {$gpslocation_style} {$recordattrs}>
+				{$gpslocation_value}
+			</td>
+			{END gpslocation_fieldcolumn}
+			{BEGIN cityproperty_fieldcolumn}
+			<td  class="{$cityproperty_class}" {$cityproperty_style} {$recordattrs}>
+				{$cityproperty_value}
+			</td>
+			{END cityproperty_fieldcolumn}
+			{BEGIN datelastupdated_fieldcolumn}
+			<td  class="{$datelastupdated_class}" {$datelastupdated_style} {$recordattrs}>
+				{$datelastupdated_value}
+			</td>
+			{END datelastupdated_fieldcolumn}
+			{BEGIN dateofinitialcreationofentry_fieldcolumn}
+			<td  class="{$dateofinitialcreationofentry_class}" {$dateofinitialcreationofentry_style} {$recordattrs}>
+				{$dateofinitialcreationofentry_value}
+			</td>
+			{END dateofinitialcreationofentry_fieldcolumn}
+			{BEGIN diameterofthetree_fieldcolumn}
+			<td  class="{$diameterofthetree_class}" {$diameterofthetree_style} {$recordattrs}>
+				{$diameterofthetree_value}
+			</td>
+			{END diameterofthetree_fieldcolumn}
+			{BEGIN floweringtree_fieldcolumn}
+			<td  class="{$floweringtree_class}" {$floweringtree_style} {$recordattrs}>
+				{$floweringtree_value}
+			</td>
+			{END floweringtree_fieldcolumn}
+			{BEGIN fruittree_fieldcolumn}
+			<td  class="{$fruittree_class}" {$fruittree_style} {$recordattrs}>
+				{$fruittree_value}
+			</td>
+			{END fruittree_fieldcolumn}
+			{BEGIN healthoftree_fieldcolumn}
+			<td  class="{$healthoftree_class}" {$healthoftree_style} {$recordattrs}>
+				{$healthoftree_value}
+			</td>
+			{END healthoftree_fieldcolumn}
+			{BEGIN lastupdaterid_fieldcolumn}
+			<td  class="{$lastupdaterid_class}" {$lastupdaterid_style} {$recordattrs}>
+				{$lastupdaterid_value}
+			</td>
+			{END lastupdaterid_fieldcolumn}
+			{BEGIN latitude_fieldcolumn}
+			<td  class="{$latitude_class}" {$latitude_style} {$recordattrs}>
+				{$latitude_value}
+			</td>
+			{END latitude_fieldcolumn}
+			{BEGIN longitude_fieldcolumn}
+			<td  class="{$longitude_class}" {$longitude_style} {$recordattrs}>
+				{$longitude_value}
+			</td>
+			{END longitude_fieldcolumn}
+			{BEGIN otherhazards_fieldcolumn}
+			<td  class="{$otherhazards_class}" {$otherhazards_style} {$recordattrs}>
+				{$otherhazards_value}
+			</td>
+			{END otherhazards_fieldcolumn}
+			{BEGIN overheadhazzards_fieldcolumn}
+			<td  class="{$overheadhazzards_class}" {$overheadhazzards_style} {$recordattrs}>
+				{$overheadhazzards_value}
+			</td>
+			{END overheadhazzards_fieldcolumn}
+			{BEGIN picoftreepit_fieldcolumn}
+			<td  class="{$picoftreepit_class}" {$picoftreepit_style} {$recordattrs}>
+				{$picoftreepit_value}
+			</td>
+			{END picoftreepit_fieldcolumn}
+			{BEGIN picofleaf_fieldcolumn}
+			<td  class="{$picofleaf_class}" {$picofleaf_style} {$recordattrs}>
+				{$picofleaf_value}
+			</td>
+			{END picofleaf_fieldcolumn}
+			{BEGIN pictureoffloweringtree_fieldcolumn}
+			<td  class="{$pictureoffloweringtree_class}" {$pictureoffloweringtree_style} {$recordattrs}>
+				{$pictureoffloweringtree_value}
+			</td>
+			{END pictureoffloweringtree_fieldcolumn}
+			{BEGIN pictureoftree_fieldcolumn}
+			<td  class="{$pictureoftree_class}" {$pictureoftree_style} {$recordattrs}>
+				{$pictureoftree_value}
+			</td>
+			{END pictureoftree_fieldcolumn}
+			{BEGIN pictureoftreetrunk_fieldcolumn}
+			<td  class="{$pictureoftreetrunk_class}" {$pictureoftreetrunk_style} {$recordattrs}>
+				{$pictureoftreetrunk_value}
+			</td>
+			{END pictureoftreetrunk_fieldcolumn}
+			{BEGIN privateproperty_fieldcolumn}
+			<td  class="{$privateproperty_class}" {$privateproperty_style} {$recordattrs}>
+				{$privateproperty_value}
+			</td>
+			{END privateproperty_fieldcolumn}
+			{BEGIN recordcreatorid_fieldcolumn}
+			<td  class="{$recordcreatorid_class}" {$recordcreatorid_style} {$recordattrs}>
+				{$recordcreatorid_value}
+			</td>
+			{END recordcreatorid_fieldcolumn}
+			{BEGIN referencepictureoftree_fieldcolumn}
+			<td  class="{$referencepictureoftree_class}" {$referencepictureoftree_style} {$recordattrs}>
+				{$referencepictureoftree_value}
+			</td>
+			{END referencepictureoftree_fieldcolumn}
+			{BEGIN sizeoftree_fieldcolumn}
+			<td  class="{$sizeoftree_class}" {$sizeoftree_style} {$recordattrs}>
+				{$sizeoftree_value}
+			</td>
+			{END sizeoftree_fieldcolumn}
+			{BEGIN streetaddress_fieldcolumn}
+			<td  class="{$streetaddress_class}" {$streetaddress_style} {$recordattrs}>
+				{$streetaddress_value}
+			</td>
+			{END streetaddress_fieldcolumn}
+			{BEGIN streettree_fieldcolumn}
+			<td  class="{$streettree_class}" {$streettree_style} {$recordattrs}>
+				{$streettree_value}
+			</td>
+			{END streettree_fieldcolumn}
+			{BEGIN treeiconformap_fieldcolumn}
+			<td  class="{$treeiconformap_class}" {$treeiconformap_style} {$recordattrs}>
+				{$treeiconformap_value}
+			</td>
+			{END treeiconformap_fieldcolumn}
+			{BEGIN treepitcondition_fieldcolumn}
+			<td  class="{$treepitcondition_class}" {$treepitcondition_style} {$recordattrs}>
+				{$treepitcondition_value}
+			</td>
+			{END treepitcondition_fieldcolumn}
+			{BEGIN treetype_fieldcolumn}
+			<td  class="{$treetype_class}" {$treetype_style} {$recordattrs}>
+				{$treetype_value}
+			</td>
+			{END treetype_fieldcolumn}
+			{BEGIN whenplanted_fieldcolumn}
+			<td  class="{$whenplanted_class}" {$whenplanted_style} {$recordattrs}>
+				{$whenplanted_value}
+			</td>
+			{END whenplanted_fieldcolumn}
+			{BEGIN treetype_id_fieldcolumn}
+			<td  class="{$treetype_id_class}" {$treetype_id_style} {$recordattrs}>
+				{$treetype_id_value}
+			</td>
+			{END treetype_id_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>
